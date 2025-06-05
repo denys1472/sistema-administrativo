@@ -1,0 +1,77 @@
+/* General y Reset básico (puedes añadir más si quieres) */
+html {
+    box-sizing: border-box; /* Facilita el cálculo de anchos y paddings */
+    font-size: 62.5%; /* 1rem = 10px, facilita la responsividad */
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Fuente base */
+    margin: 0; /* Eliminar margen predeterminado del body */
+    background-color: #f4f4f4; /* Un fondo claro para la página */
+}
+
+/* Estilos para el Título Principal (h1) */
+.titulo { /* Usamos la clase para el h1, es más específico */
+    text-align: center;
+    background-color: #28a745; /* Un verde más estándar, puedes usar 'green' si prefieres */
+    color: white;
+    padding: 30px 20px; /* Arriba/abajo: 30px, izquierda/derecha: 20px */
+    margin: 0; /* Elimina márgenes extra si está dentro de un header sin padding */
+    font-size: 4rem; /* Tamaño más grande para el título principal */
+    line-height: 1; /* Ajustar el espacio de línea si es necesario */
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* Estilos para la barra de navegación principal */
+.navegacion-principal1 {
+    background-color: #3c9bb3; /* Un verde medio para la barra de navegación */
+    display: flex; /* Para que los enlaces se pongan en fila */
+    flex-wrap: wrap; /* Permite que los elementos salten de línea en pantallas pequeñas */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 20px; /* Espacio entre los enlaces */
+    padding: 15px 10px; /* Padding interno de la barra de navegación */
+    margin-bottom: 30px; /* Un poco de espacio debajo de la navegación */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sutil sombra para profundidad */
+}
+
+/* Estilos para los enlaces dentro de la navegación principal1 */
+/* Corregido: .navegacion-principal1 a, no navegacion-principaL2 */
+.navegacion-principal1 a {
+    color: white;
+    text-decoration: none; /* Quitar el subrayado predeterminado */
+    font-weight: bold;
+    font-size: 1.8rem; /* Tamaño de fuente para los enlaces */
+    background-color: #3c9bb3; /* Verde oscuro para los botones de navegación */
+    padding: 12px 20px; /* Padding interno de cada botón de navegación */
+    border-radius: 8px; /* Bordes ligeramente redondeados */
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out; /* Transición suave al hover */
+    text-transform: uppercase; /* Convertir a mayúsculas para coherencia */
+}
+
+.navegacion-principal1 a:hover {
+    background-color: #3c9bb3; /* Un verde aún más oscuro al pasar el mouse */
+    transform: translateY(-2px); /* Efecto ligero de "elevación" */
+}
+
+/* Adaptación a móviles */
+@media (max-width: 768px) { /* Usar 768px como breakpoint es común para tablets */
+    .navegacion-principal1 {
+        flex-direction: column; /* Apila los enlaces verticalmente */
+        align-items: center; /* Centra los enlaces apilados */
+        gap: 10px; /* Reduce el espacio entre elementos apilados */
+    }
+
+    .navegacion-principal1 a {
+        width: 90%; /* Los enlaces ocupan casi todo el ancho disponible */
+        text-align: center; /* Centra el texto dentro del botón */
+        padding: 15px 10px; /* Aumentar el padding vertical en móviles */
+    }
+
+    .titulo {
+        font-size: 3.5rem; /* Ajustar el tamaño del título en móviles */
+        padding: 20px 10px;
+    }
+}
